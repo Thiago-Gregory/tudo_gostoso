@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tudo_gostoso/models/recipe.dart';
 import 'package:tudo_gostoso/screens/home/widgets/details.dart';
+import 'package:tudo_gostoso/screens/home/widgets/my_list.dart';
+import 'package:tudo_gostoso/screens/home/widgets/my_title.dart';
 import 'package:tudo_gostoso/style.dart';
 
 class Home extends StatelessWidget {
@@ -56,8 +59,39 @@ class Home extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            //Recipe Photo
             Image.asset(recipe.photo, fit: BoxFit.fill),
+
+            //Recipe Details
             Details(recipe),
+
+            //Ingredients
+            MyTitle(
+              title: "Ingredientes", 
+              icon: FontAwesomeIcons.bookOpen,
+            ),
+            MyList(
+              title: "Massa",
+              listOfElements: recipe.ingredientsPasta,
+            ),
+            MyList(
+              title: "Cobertura",
+              listOfElements: recipe.ingredientsTopping,
+            ),
+
+            //Preparation Mode
+            MyTitle(
+              title: "Modo de Preparo", 
+              icon: FontAwesomeIcons.utensilSpoon,
+            ),
+            MyList(
+              title: "Massa",
+              listOfElements: recipe.preparationModePasta
+            ),
+            MyList(
+              title: "Cobertura",
+              listOfElements: recipe.preparationModeTopping,
+            ),
           ],
         ),
       ),
