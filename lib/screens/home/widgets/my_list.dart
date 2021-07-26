@@ -50,24 +50,24 @@ import 'package:flutter/material.dart';
   }
 
   //Another way to create Widgets from lists
-  List<Widget> buildList(List<String> itens) {
-    List<Widget> listOfWidgets = [];
+  // List<Widget> buildList(List<String> itens) {
+  //   List<Widget> listOfWidgets = [];
 
-    itens.forEach((element) {
-      listOfWidgets.add(
-        Padding(
-          padding: const
-          EdgeInsets.symmetric(
-            vertical: 5,
-            horizontal: 20,
-          ),
-          child: Text(
-            element
-          ),
-        ),
-      );
-    });
+  //   itens.forEach((element) {
+  //     listOfWidgets.add(
+  //       Padding(
+  //         padding: const
+  //         EdgeInsets.symmetric(
+  //           vertical: 5,
+  //           horizontal: 20,
+  //         ),
+  //         child: Text(
+  //           element
+  //         ),
+  //       ),
+  //     );
+  //   });
 
-    return listOfWidgets;
-  }
+  //   return listOfWidgets;
+  // }
 }
